@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #b2cba3;
+    background-color: #c4d7b8;
     color: #000;
     margin: 0;
     padding: 0;
@@ -89,7 +89,7 @@ body {
     border-radius: 5px;
     margin-top: 25px;
     margin-bottom: 25px;
-    background-color: #7a926c;
+    background-color: #b2cba3;
 }
 
 .section .section-icon {
@@ -140,7 +140,7 @@ body {
     padding: 10px 20px 20px 20px;
     padding-bottom: 5px;
     border-radius: 4px;
-    background-color: #a1c08e;
+    background-color: #b2cba3;
     margin-top: 15px;
 }
 
