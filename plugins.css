@@ -20,7 +20,7 @@
 }
 
 .alert.danger {
-    background: #da7c7c;
+    background: #7a926c;
 }
 
 .alert.warning {
@@ -67,7 +67,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: #a1c08e;
+    background: #c4d7b8;
     z-index: 4;
     overflow: none;
     -webkit-box-shadow: 1px -8px 18px 4px rgb(0 0 0 / 71%);
