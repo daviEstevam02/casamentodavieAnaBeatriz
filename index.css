@@ -216,10 +216,12 @@ body {
 @media only screen and (max-device-width: 768px) {
     .app {
         /* width: calc(100% - 40px); */
+        color: #ffffff;
     }
 
     .couple-names {
         word-spacing: 100vw;
+        margin-right: 50px;
     }
 }
 
