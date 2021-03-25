@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#d1999c" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./plugins.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/plugins.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
@@ -18,16 +18,26 @@
 
 <body>
     <div class="app" :class="{'loading': loading, 'show': initialized}">
+
+
         <div class="container">
+          
+            <span class="quote">"E tudo o que fizerdes, seja em palavra, seja em ação, fazei-o em nome do Senhor
+                Jesus, dando por ele graças a Deus Pai." Colossenses 3:17.</span>
             <div class="parents-names left">
-                <span class="parent-name">Elias Cavalcante Junior</span>
-                <span class="parent-name">Gislene de Oliveira Cavalcante</span>
+                <strong class="parent-name">Elias Cavalcante Junior</strong>
+                <strong class="parent-name">Gislene de Oliveira Cavalcante</strong>
             </div>
             <div class="parents-names right">
-                <span class="parent-name">Elias Maduro Ribeiro</span>
-                <span class="parent-name">Ana Rita O.B. Ribeiro</span>
+                <strong class="parent-name">Elias Maduro Ribeiro</strong>
+                <strong class="parent-name">Ana Rita O.B. Ribeiro</strong>
             </div>
-            <p class="couple-names">Davi & Ana Beatriz</p>
+            <p class="couple-names">Davi & Beatriz</p>
+            <div class="picture-section">
+                <figure class="picture"></figure>
+                <figure class="picture"></figure>
+                <figure class="picture"></figure>
+            </div>
             <span class="info">Convidam para seu casamento a realizar-se em</span>
             <span class="info date"><span class="emphasis">15</span> de <span class="emphasis">Janeiro</span> de <span
                     class="emphasis">2022</span> - <span class="emphasis">16h</span>
@@ -38,11 +48,10 @@
                 <i class="section-icon far fa-heart"></i>
                 <span class="section-title">Nosso Casamento</span>
                 <span class="info justify">
-                    Olá! Você é nosso convidado nesta data tão importante. Agradecemos ao Senhor por estarmos nos unindo
-                    neste dia tão especial e viemos te convidar para celebrar conosco.
-                    <span class="quote">"E tudo o que fizerdes, seja em palavra, seja em ação, fazei-o em nome do Senhor
-                        Jesus, dando por ele graças a Deus Pai." Colossenses 3:17.</span>
-                    <span v-if="preventShare" class="note">Obs.: Se este link foi enviado especialmente para você,
+                    Olá! Viemos te convidar para compartilhar, comemorar e agradecer a Deus neste dia tão
+                     importante para nós. 
+                    
+                 <span v-if="preventShare" class="note">Obs.: Se este link foi enviado especialmente para você,
                         pedimos a
                         gentileza de evitar o compartilhar com outras pessoas.</span>
                 </span>
@@ -102,9 +111,8 @@
                 <i class="section-icon fas fa-check"></i>
                 <span class="section-title">Confirmação de presença</span>
                 <span class="info justify">
-                    É importante pra nós sabermos se você irá, seu nome, seu e CPF assim como das pessoas que irão
-                    contigo
-                    também.
+                    Para questões de administração é importante pra nós sabermos se você irá!<br />
+                    Digite seu nome, seu e CPF assim como das pessoas que irão contigo também.
                     As pessoas que você incluir aqui com você não precisarão realizar a inscrição.<br /><br />
                     Para confirmar a presença, preencha os campos abaixo e clique em <strong>Confirmar</strong>.
                     <div class="person-card">
@@ -149,7 +157,7 @@
                 </span>
             </div>
 
-            <div class="section-divider"></div>
+            <!-- <div class="section-divider"></div>
             <div class="section">
                 <i class="section-icon fab fa-youtube"></i>
                 <span class="section-title">Transmissão</span>
@@ -161,7 +169,7 @@
                     Abrir link da transmissão <i class="fas fa-external-link-alt"></i></a>
                 <a class="act-link block-link" href="javascript:void(0)" @click="copyTransmissionUrl()">
                     Copiar link de transmissão <i class="fas fa-link"></i></a>
-            </div>
+            </div> -->
 
             <div class="section-divider"></div>
             <div class="section">
@@ -216,20 +224,20 @@
             <span style="display: block">{{alert.text}}</span>
             <a v-if="!loading" class="act-link" href="javascript:void(0)" @click="dismissAlert()">Ok</a>
             <div v-if="loading" style="padding-top: 4px">
-                <img src="./three-dots.svg" style="height: 10px" />
+                <img src="../three-dots.svg" style="height: 10px" />
             </div>
         </div>
 
         <div class="music" title="Mutar/Desmutar volume" @click="toggleSound()">
             <i class="fas" :class="{'fa-volume-up': !musicMuted, 'fa-volume-mute': musicMuted}"></i>
             <audio id="music" autoplay loop>
-                <source src="./music.mp3" />
+                <source src="../music.mp3" />
             </audio>
         </div>
 
     </div>
 
-    <script src="./index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
