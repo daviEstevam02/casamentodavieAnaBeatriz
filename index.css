@@ -221,7 +221,7 @@ body {
 
     .couple-names {
         word-spacing: 100vw;
-        margin-right: 50px;
+        display: inline-block;
     }
 }
 
