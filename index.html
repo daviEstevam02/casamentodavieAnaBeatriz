@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#d1999c" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/plugins.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./plugins.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
@@ -224,20 +224,20 @@
             <span style="display: block">{{alert.text}}</span>
             <a v-if="!loading" class="act-link" href="javascript:void(0)" @click="dismissAlert()">Ok</a>
             <div v-if="loading" style="padding-top: 4px">
-                <img src="../three-dots.svg" style="height: 10px" />
+                <img src="./three-dots.svg" style="height: 10px" />
             </div>
         </div>
 
         <div class="music" title="Mutar/Desmutar volume" @click="toggleSound()">
             <i class="fas" :class="{'fa-volume-up': !musicMuted, 'fa-volume-mute': musicMuted}"></i>
             <audio id="music" autoplay loop>
-                <source src="../music.mp3" />
+                <source src="./music.mp3" />
             </audio>
         </div>
 
     </div>
 
-    <script src="../js/index.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
