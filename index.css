@@ -213,7 +213,7 @@ body {
     color: #000;
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 1024px) {
     .app {
         /* width: calc(100% - 40px); */
         color: #ffffff;
