@@ -214,13 +214,13 @@ body {
 }
 
 @media only screen and (max-device-width: 1024px) {
-    .app {
+    body {
         /* width: calc(100% - 40px); */
         background-image:
         linear-gradient(
-         rgba(0, 0, 0, 0.1), 
-         rgba(0, 0, 0, 0.1)
-       );
+         rgba(0, 0, 0, 0.2), 
+         rgba(0, 0, 0, 0.2)
+       ), url(./backgroundflower4.jpg) ;
         color: #ffffff;
     }
 
