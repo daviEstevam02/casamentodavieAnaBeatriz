@@ -220,7 +220,7 @@ body {
         linear-gradient(
          rgba(0, 0, 0, 0.2), 
          rgba(0, 0, 0, 0.2)
-       ), url(./backgroundflower4.jpg) ;
+       ),url(./backgroundflower4.jpg);
         color: #ffffff;
     }
 
