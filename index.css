@@ -216,6 +216,11 @@ body {
 @media only screen and (max-device-width: 1024px) {
     .app {
         /* width: calc(100% - 40px); */
+        background-image:
+        linear-gradient(
+         rgba(0, 0, 0, 0.1), 
+         rgba(0, 0, 0, 0.1)
+       );
         color: #ffffff;
     }
 
@@ -228,8 +233,17 @@ body {
         height: 75px;
     }
     .act-link{
-        color: #ffff;
+        color: #ffffff;
     }
+    .person-card .card-title{
+        color: #ffffff;
+    }
+    .field input::placeholder,
+    .field textarea::placeholder {
+        color: #ffffff;
+    }
+
+   
 }
 
 .justify {
