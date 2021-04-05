@@ -227,6 +227,9 @@ body {
         width: 75px;
         height: 75px;
     }
+    .act-link{
+        color: #ffff;
+    }
 }
 
 .justify {
