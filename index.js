@@ -1,6 +1,6 @@
 
-(async function () {
-    const apiUrl = 'http://localhost:3000';
+(async function() {
+    const apiUrl =  'localhost:3000';
     const getTransmissionLinkUrl = 'https://prod-124.westus.logic.azure.com:443/workflows/1c8e1b831bcb47e7b4823b23fb9e3307/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_OCHCbHT3DfZeczsQZ_T5YXStf669-zoT8HsGdJW9Y4';
     const postPersonsUrl = 'https://prod-34.westus.logic.azure.com:443/workflows/331f2eedf8884f1f9eb1cac2959380ba/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=XOcN4ZMMfJ3pmkjmJUufwN9wsbZm9FnRsFdlmQvfE7E';
     const url = new URL(window.location.href);
@@ -130,7 +130,9 @@
                 if (!this.message.message)
                     return this.showDangerAlert('Preencha sua mensagem');
 
-                const urlEmailApi = `${apiUrl}/sendemail`
+                const urlEmailApi = `http://${apiUrl}/sendmail`
+
+                console.log(urlEmailApi)
                     
                 this.setLoading(true);
                 
