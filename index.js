@@ -154,6 +154,9 @@
             },
             
             savePersons: async function () {
+
+                const userApi = `http://${apiUrl}/users` 
+
                 for (let person of this.persons) {
                     let index = this.persons.indexOf(person);
                     if (!person.name)
@@ -166,7 +169,7 @@
 
                 this.setLoading(true);
 
-                await fetch(postPersonsUrl, {
+                await fetch(userApi, {
                     method: 'POST',
                     headers,
                     body: JSON.stringify(this.persons)
