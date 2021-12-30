@@ -33,13 +33,23 @@
             </div>
             <p class="couple-names">Davi & Beatriz</p>
             <div class="picture-section-1">
-                <figure class="picture"></figure>
-                <figure class="picture"></figure>
-                <figure class="picture"></figure>
+                <figure class="picture">
+                    <img class="img"src="./assets/prewedding1.jpg" alt="" srcset="">
+                </figure>
+                <figure class="picture">
+                    <img class="img" src="./assets/pre wedding (60).jpg" alt="" srcset="" >
+                </figure>
+                <figure class="picture">
+                    <img class="img" src="./assets/pre wedding2.jpg" alt="" srcset="">
+                </figure>
             </div>
             <div class="picture-section-2"> 
-                <figure class="picture"></figure>
-                <figure class="picture"></figure>
+                <figure class="picture">
+                    <img class="img"src="./assets/pre wedding (82).jpg" alt="" srcset="">
+                </figure>
+                <figure class="picture">
+                    <img class="img"src="./assets/pre wedding (85).jpg" alt="" srcset="">
+                </figure>
             </div>
             <span class="info">Convidam para seu casamento a realizar-se em</span>
             <span class="info date"><span class="emphasis">15</span> de <span class="emphasis">Janeiro</span> de <span
@@ -109,56 +119,6 @@
                 </div>
             </div>
 
-            <div class="section-divider"></div>
-            <div class="section">
-                <i class="section-icon fas fa-check"></i>
-                <span class="section-title">Confirmação de presença</span>
-                <span class="info justify">
-                    Para questões de administração é importante pra nós sabermos se você irá!<br />
-                    Digite seu nome, seu e CPF assim como das pessoas que irão contigo também.
-                    As pessoas que você incluir aqui com você não precisarão realizar a inscrição.<br /><br />
-                    Para confirmar a presença, preencha os campos abaixo e clique em <strong>Confirmar</strong>.
-                    <div class="person-card">
-                        <span class="card-title">Meus dados</span>
-                        <div class="field" :class="{'focus': focusField == 'name'}">
-                            <label>Nome Completo</label>
-                            <input type="text" @focus="focusField = 'name'" @blur="focusField = ''"
-                                placeholder="Digite seu nome" v-model="persons[0].name" />
-                        </div>
-                        <div class="field" :class="{'focus': focusField == 'cpf'}">
-                            <label>CPF (apenas números)</label>
-                            <input type="number" @focus="focusField = 'cpf'" @blur="focusField = ''"
-                                placeholder="Digite seu CPF" v-model="persons[0].cpf" />
-                        </div>
-                    </div>
-                    <transition-group name="slide-fade">
-                        <div class="person-card" v-for="(person, i) in [...persons].slice(1)" v-bind:key="'person' + i">
-                            <span class="card-title">Dados da pessoa {{i + 1}}</span>
-                            <a class="act-link remove-person-button" href="javascript:void(0)"
-                                @click="persons.splice(i + 1, 1)">
-                                <i class="far fa-trash-alt"></i>
-                            </a>
-                            <div class="field" :class="{'focus': focusField == 'name' + i}">
-                                <label>Nome Completo</label>
-                                <input type="text" @focus="focusField = 'name' + i" @blur="focusField = ''"
-                                    :placeholder="'Nome da pessoa ' + (i + 1)" v-model="person.name" />
-                            </div>
-                            <div class="field" :class="{'focus': focusField == 'cpf' + i}">
-                                <label>CPF (apenas números)</label>
-                                <input type="number" @focus="focusField = 'cpf' + i" @blur="focusField = ''"
-                                    :placeholder="'CPF da pessoa ' + (i + 1)" v-model="person.cpf" />
-                            </div>
-                        </div>
-                    </transition-group>
-                    <div class="persons-links">
-                        <a class="act-link block-link inline" href="javascript:void(0)" style="margin-right: 8px"
-                            @click="persons.push({})">
-                            <i class="fas fa-plus"></i> Incluir pessoa</a>
-                        <a class="act-link block-link inline" href="javascript:void(0)" @click="savePersons()">
-                            <i class="fas fa-check"></i> Confirmar</a>
-                    </div>
-                </span>
-            </div>
 
             <!-- <div class="section-divider"></div>
             <div class="section">
@@ -183,7 +143,7 @@
                     aquilo
                     que estiver a sua disposição e no seu coração.</span>
                 <a class="act-link block-link"
-                    href="" target="_blank">
+                    href="https://www.querodecasamento.com.br/lista-de-casamento/davi-e-beatriz-ribeiro" target="_blank">
                     Abrir lista de presentes <i class="fas fa-external-link-alt"></i></a>
                 <a class="act-link block-link" href="javascript:void(0)" @click="copyPix()">
                     Copiar chave Pix <i class="fas fa-key"></i></a>

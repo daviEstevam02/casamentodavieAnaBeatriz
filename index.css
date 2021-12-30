@@ -41,13 +41,26 @@ body {
     margin: auto;
 }
 
-.picture{
+.picture-section-1{
+    display: flex;
+    align-items: center;
+
+    margin-left: -4rem ;
+}
+.picture-section-2{
+    display: flex;
+    align-items: center;
+
+    margin-left: 3rem;
+}
+
+.img{
     display: inline-block;
     background: #7a926c;
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    margin: 5px 15px;
+    width: 150px;
+    height: 150px;
+    margin: 5px ;
 }
 
 .parents-names {
