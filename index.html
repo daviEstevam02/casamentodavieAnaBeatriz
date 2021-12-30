@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#d1999c" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./plugins.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davi & Ana Beatriz</title>
+</head>
+
+<body>
+    <div class="app" :class="{'loading': loading, 'show': initialized}">
+        <div class="middle"></div>
+        <div class="container">
+          
+            <span class="quote">"E tudo o que fizerdes, seja em palavra, seja em ação, fazei-o em nome do Senhor
+                Jesus, dando por ele graças a Deus Pai." <br/> Colossenses 3:17.</span>
+            <div class="parents-names left">
+                <strong class="parent-name">Elias Cavalcante Junior</strong>
+                <strong class="parent-name">Gislene de Oliveira Cavalcante</strong>
+            </div>
+            <div class="parents-names right">
+                <strong class="parent-name">Elias Maduro Ribeiro</strong>
+                <strong class="parent-name">Ana Rita O.B. Ribeiro</strong>
+            </div>
+            <p class="couple-names">Davi & Beatriz</p>
+            <div class="picture-section-1">
+                <figure class="picture">
+                    <img class="img"src="./assets/prewedding1.jpg" alt="" srcset="">
+                </figure>
+                <figure class="picture">
+                    <img class="img" src="./assets/pre wedding (60).jpg" alt="" srcset="" >
+                </figure>
+                <figure class="picture">
+                    <img class="img" src="./assets/pre wedding2.jpg" alt="" srcset="">
+                </figure>
+            </div>
+            <div class="picture-section-2"> 
+                <figure class="picture">
+                    <img class="img"src="./assets/pre wedding (82).jpg" alt="" srcset="">
+                </figure>
+                <figure class="picture">
+                    <img class="img"src="./assets/pre wedding (85).jpg" alt="" srcset="">
+                </figure>
+            </div>
+            <span class="info">Convidam para seu casamento a realizar-se em</span>
+            <span class="info date"><span class="emphasis">15</span> de <span class="emphasis">Janeiro</span> de <span
+                    class="emphasis">2022</span> - <span class="emphasis">16h</span>
+            </span>
+
+            <div class="section-divider"></div>
+            <div class="section">
+                <i class="section-icon far fa-heart"></i>
+                <span class="section-title">Nosso Casamento</span>
+                <span class="info justify">
+                    Olá! Viemos te convidar para compartilhar, comemorar e agradecer a Deus neste dia tão
+                     importante para nós. 
+                    
+                 <span v-if="preventShare" class="note">Obs.: Se este link foi enviado especialmente para você,
+                        pedimos a
+                        gentileza de evitar o compartilhar com outras pessoas.</span>
+                </span>
+            </div>
+
+           
+            <div class="section-divider"></div>
+            <div class="section">
+                <i class="section-icon fas fa-map-marker-alt"></i>
+                <span class="section-title">Local</span>
+                <span class="info">Salão ADCEmbraer</span>
+                <div>
+                    <a class="act-link block-link" href="javascript:void(0)" :class="{'active': showCompleteAddress}"
+                        @click="showCompleteAddress = !showCompleteAddress">Ver o endereço completo <i
+                            class="far fa-eye"></i></a>
+                    <transition name="slide-fade">
+                        <div v-if="showCompleteAddress" class="block-link-info">
+                            Rodovia dos Tamoios, Km 7,5, Av. A, São José dos Campos - SP, 12227-000
+                        </div>
+                    </transition>
+                    <!-- <a class="act-link block-link" href="javascript:void(0)" :class="{'active': showMap}"
+                        @click="showMap = !showMap">Ver mapa <i class="fas fa-map-marked-alt"></i></a>
+                    <transition name="slide-fade">
+                        <div v-if="showMap" class="block-link-info">
+                            <iframe style="width: 100%; height: 400px; border-radius: 5px; border: none"
+                                src="https://www.google.com/maps/place/Clube+de+Campo+ADC+Embraer/@-23.2698591,-45.8403808,17.26z/data=!4m12!1m6!3m5!1s0x94cc4adda5689475:0x57acde99fb101e77!2sClube+de+Campo+ADC+Embraer!8m2!3d-23.2700797!4d-45.8385399!3m4!1s0x94cc4adda5689475:0x57acde99fb101e77!8m2!3d-23.2700797!4d-45.8385399"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </transition> -->
+                    <a class="act-link block-link" target="_blank"
+                        href="https://www.google.com/maps/place/Sal%C3%A3o+Dubai+-+Av.+Maria+C%C3%A2nhttps://www.google.com/maps/place/Clube+de+Campo+ADC+Embraer/@-23.2698591,-45.8403808,17.26z/data=!4m12!1m6!3m5!1s0x94cc4adda5689475:0x57acde99fb101e77!2sClube+de+Campo+ADC+Embraer!8m2!3d-23.2700797!4d-45.8385399!3m4!1s0x94cc4adda5689475:0x57acde99fb101e77!8m2!3d-23.2700797!4d-45.8385399">
+                        Abrir no Google Maps <i class="fab fa-google"></i></a>
+                    <a class="act-link block-link" target="_blank"
+                        href="https://www.waze.com/pt-BR/live-map/directions/brasil/sao-paulo/clube-de-campo-adc-embraer?navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_directions&to=place.ChIJdZRopd1KzJQRdx4Q-5nerFc">
+                        Abrir no Waze <i class="fab fa-waze"></i></a>
+                    <a class="act-link block-link" href="javascript:void(0)" :class="{'active': showMap}"
+                        @click="showInfos = !showInfos">Covid-19 <i class="fas fa-virus"></i></a>
+                    <transition name="slide-fade">
+                        <div v-if="showInfos" class="block-link-info justify">
+                            O culto e cerimônia ocorrerão no mesmo local. Devido o momento de pandemia que estamos
+                            passando,
+                            estaremos a seguir todos os procedimentos e normas estabelecidas para a realização do
+                            evento, portanto haverá o limite de pessoas respeitando a porcentagem legal imposta,
+                            distanciamento necessário entre os assentos e disponibilização de frascos de álcool 70
+                            INPM.<br /><br />
+                            O uso de máscaras será obrigatório, sendo permitida retirada apenas para alimentação no
+                            refeitório. Recomendamos que você compartilhe a mesma mesa no refeitório com pessoas que
+                            façam parte do seu convívio. A comida será servida em self-service e todos serão instruídos a
+                            passarem ácool nas mãos, usar luvas descartáveis, a evitar filas, aglomereações ou conversar
+                            enquanto estiverem se servindo.
+                        </div>
+                    </transition>
+                </div>
+            </div>
+
+
+            <div class="section-divider"></div>
+            <div class="section">
+                <i class="section-icon fas fa-gift"></i>
+                <span class="section-title">Lista de Presentes</span>
+                <span class="info justify">Se você puder e desejar nos abençoar comprando um dos itens de nossa lista de
+                    presentes. Se assim fizer, faça
+                    aquilo
+                    que estiver a sua disposição e no seu coração.</span>
+                <a class="act-link block-link"
+                    href="https://www.querodecasamento.com.br/lista-de-casamento/davi-e-beatriz-ribeiro" target="_blank">
+                    Abrir lista de presentes <i class="fas fa-external-link-alt"></i></a>
+                <a class="act-link block-link" href="javascript:void(0)" @click="copyPix()">
+                    Copiar chave Pix <i class="fas fa-key"></i></a>
+            </div>
+
+            <div class="section-divider"></div>
+            <div class="section">
+                <i class="section-icon far fa-comment-dots"></i>
+                <span class="section-title">Mensagens</span>
+                <span class="info justify">Já que está aqui, deixe uma mensagem bem bonita e carinnhosa pra nós,
+                    ficaremos muito felizes em saber que você passou por aqui.
+                    <div class="person-card">
+                        <div class="field" :class="{'focus': focusField == 'mensagemNome'}" style="margin-top: 0">
+                            <label>Nome</label>
+                            <input id="senderName"  placeholder="Digite seu nome" @focus="focusField = 'mensagemNome'"
+                                v-model="message.name" @blur="focusField = ''" />
+                        </div>
+                        <div class="field" :class="{'focus': focusField == 'mensagem'}">
+                            <label>Mensagem</label>
+                            <textarea id="messageSent" placeholder="Digite sua mensagem" rows="5" @focus="focusField = 'mensagem'"
+                                v-model="message.message" @blur="focusField = ''"></textarea>
+                        </div>
+                    </div>
+                    <div class="persons-links">
+                        <a class="act-link block-link inline" href="javascript:void(0)" @click="sendMessage()">
+                            Enviar <i class="far fa-paper-plane"></i></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        <div class="presentation" :class="{'show': !invitationOpened}">
+            <div class="presentation-text">
+                Olá, {{tag || 'Convidado'}}!
+                <a v-if="!loading" class="act-link block-link" href="javascript:void(0)" @click="openInvitation()">Abrir
+                    convite!</a>
+            </div>
+        </div>
+
+        <div class="alert" :class="{'show': alert.show, [alert.type]: true}">
+            <span style="display: block">{{alert.text}}</span>
+            <a v-if="!loading" class="act-link" href="javascript:void(0)" @click="dismissAlert()">Ok</a>
+            <div v-if="loading" style="padding-top: 4px">
+                <img src="./three-dots.svg" style="height: 10px" />
+            </div>
+        </div>
+
+        <div class="music" title="Mutar/Desmutar volume" @click="toggleSound()">
+            <i class="fas" :class="{'fa-volume-up': !musicMuted, 'fa-volume-mute': musicMuted}"></i>
+            <audio id="music" autoplay loop>
+                <source src="./worship (mp3cut.net).mp3" />
+            </audio>
+        </div>
+
+    </div>
+    <script src="./index.js"></script>
+    <script src="../api/node-email.js"></script>
+    <script src="../api/mailapi.js"></script>
+</body>
+
+</html>
