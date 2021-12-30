@@ -239,11 +239,8 @@ body {
         word-spacing: 100vw;
         display: inline-block;
     }
-    .picture-section-1{
-        margin-right: 4rem;
-    }
-    .picture-section-2{
-        margin-right: 4rem;
+    .imgsection{
+        margin-right: 3rem;
     }
     .img{
         width: 100px;
