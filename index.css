@@ -59,7 +59,6 @@ body {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin: 5px ;
 }
 
 .parents-names {
@@ -244,8 +243,8 @@ body {
         margin:0 auto;
     }
     .img{
-        width: 75px;
-        height: 75px;
+        width: 90px;
+        height: 90px;
     }
     .act-link{
         color: #ffffff;
