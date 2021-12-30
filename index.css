@@ -44,14 +44,13 @@ body {
 .picture-section-1{
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    margin-left: -4rem ;
 }
 .picture-section-2{
     display: flex;
     align-items: center;
-
-    margin-left: 3rem;
+    justify-content: center;
 }
 
 .img{
@@ -241,7 +240,10 @@ body {
         word-spacing: 100vw;
         display: inline-block;
     }
-    .picture{
+    .imgsection{
+        margin:0 auto;
+    }
+    .img{
         width: 75px;
         height: 75px;
     }
@@ -255,8 +257,6 @@ body {
     .field textarea::placeholder {
         color: #ffffff;
     }
-
-   
 }
 
 .justify {
