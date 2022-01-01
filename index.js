@@ -26,12 +26,12 @@
                 name: '',
                 cpf: ''
             }],
-            mailObj: {
-                from: "daviestevam02@gmail.com",
-                recipients: ["daviestevam02@gmail.com"],
-                subject: senderName,
-                message: messageSent,
-            },
+            // mailObj: {
+            //     from: "daviestevam02@gmail.com",
+            //     recipients: ["daviestevam02@gmail.com"],
+            //     subject: senderName,
+            //     message: messageSent,
+            // },
             alert: {
                 text: '',
                 type: '',
@@ -125,32 +125,32 @@
                 }
             },
             sendMessage: async function () {
-                if (!this.message.name)
-                return this.showDangerAlert('Preencha seu nome');
-                if (!this.message.message)
-                    return this.showDangerAlert('Preencha sua mensagem');
+                // if (!this.message.name)
+                // return this.showDangerAlert('Preencha seu nome');
+                // if (!this.message.message)
+                //     return this.showDangerAlert('Preencha sua mensagem');
 
-                const urlEmailApi = `http://${apiUrl}/sendmail`
+                // const urlEmailApi = `http://${apiUrl}/sendmail`
 
-                console.log(urlEmailApi)
+                // console.log(urlEmailApi)
                     
-                this.setLoading(true);
+                // this.setLoading(true);
                 
-                await fetch(urlEmailApi , {
-                    method: 'POST',
-                    headers,
-                    body: JSON.stringify(this.message)
-                });
+                // await fetch(urlEmailApi , {
+                //     method: 'POST',
+                //     headers,
+                //     body: JSON.stringify(this.message)
+                // });
 
-                this.setLoading(false);
+                // this.setLoading(false);
                 
-                this.message = {
-                    name: '',
-                    message: ''
-                };
+                // this.message = {
+                //     name: '',
+                //     message: ''
+                // };
 
-                await new Promise(resolve => setTimeout(resolve, 300));
-                this.showInfoAlert('Sua mensagem foi enviada!');
+                // await new Promise(resolve => setTimeout(resolve, 300));
+                // this.showInfoAlert('Sua mensagem foi enviada!');
             },
             
             savePersons: async function () {
